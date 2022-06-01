@@ -59,11 +59,11 @@ $(document).keypress(function() {
 
 function checkAnswer() {
   if (gamePattern.toString() == userClickedPattern.toString()) {
-
+    level++;
     userClickedPattern = [];
     buttonPressCount = 0;
     setTimeout(function() {
-      $("#level-title").html("Level - " + level++);
+      $("#level-title").html("Level - " + level);
       nextSequence();
     }, 500);
   } else {
